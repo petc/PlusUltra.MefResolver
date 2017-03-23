@@ -1,11 +1,11 @@
 # PlusUltra.MefResolver
 Project to include in solution for resolving objects within assemblies, based on MEF.
 
-##Usage
+## Usage ##
 
 For the assembly which you want to be resolved automatically by the MefResolver, create a class in the project which implements the ```IComponent``` interface and put the ```Export``` attribute on it. Consequently, register the types to be resolved in the ```Setup``` method
 
-###Example
+#### Example  ####
 ```C#
 [Export(typeof(IComponent))]
 class DependencyResolver : IComponent
@@ -19,7 +19,7 @@ class DependencyResolver : IComponent
 
 Secondly, in the unity config class of your startup project, load the container.
 
-###Example
+#### Example ####
 
 ```C#
 ComponentLoader.LoadContainer(container, ".\\bin", "DataService.BusinessServices.dll");
